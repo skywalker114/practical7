@@ -7,8 +7,8 @@ class QuickSort: public Sort{
 public:
    QuickSort();
    ~QuickSort() {};
-   void exec(std::vector<int> &getsort, int, int);
+   void exec(std::vector<int> &getsort, int lower, int upper);
 private:
-   int Split(std::vector<int> &getsort, int, int, int);
+   int Split(std::vector<int> &getsort, int lower, int upper, int point_index);
 };
 #endif
