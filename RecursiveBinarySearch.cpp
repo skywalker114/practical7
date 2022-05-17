@@ -3,16 +3,16 @@
 using namespace std;
 
 RecursiveBinarySearch::RecursiveBinarySearch(){}
-int RecursiveBinarySearch::boolSearch(vector<int> &toSearch, int key, int lower, int upper){
+int RecursiveBinarySearch::search(vector<int> &toSearch, int key, int lower, int upper){
    if( lower > upper ){
        return -1;
    }
    int midpoint = (lower+upper)/2;
    if( toSearch.at(midpoint) > key ){  
-       return boolSearch(toSearch, key, lower, midpoint - 1);
+       return search(toSearch, key, lower, midpoint - 1);
    }
    else if( toSearch.at(midpoint) < key ){
-       return boolSearch(toSearch, key, midpoint + 1, upper);
+       return search(toSearch, key, midpoint + 1, upper);
    }
    else{
        return midpoint;
