@@ -23,5 +23,4 @@ int QuickSort::Split(vector<int> list, int lower, int upper, int point_index){
    }
    exchange(list.at(new_point), list.at(upper));
    return new_point;
-}
-
+};
