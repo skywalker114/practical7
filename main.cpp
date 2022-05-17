@@ -19,7 +19,7 @@ int main(){
        inputs.push_back(val);
    }
    QuickSort myq;
-   myq.exec(inputs, 0, inputs.size() - 1);
+   myq.sort(inputs, 0, inputs.size() - 1);
    RecursiveBinarySearch mybin;
    int found = mybin.boolSearch(inputs, 0, 0, inputs.size() - 1);
    if (found >= 0){

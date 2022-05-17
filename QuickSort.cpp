@@ -3,12 +3,12 @@
 using namespace std;
 
 QuickSort::QuickSort(){}
-void QuickSort::exec(vector<int> &getsort, int lower, int upper){
+void QuickSort::sort(vector<int> &getsort, int lower, int upper){
    if (lower < upper){
        int point_index = (lower + upper) / 2;
        int new_point = Split(getsort, lower, upper, point_index);
-       exec(getsort, lower, new_point - 1);
-       exec(getsort, new_point + 1, upper);  
+       sort(getsort, lower, new_point - 1);
+       sort(getsort, new_point + 1, upper);  
    }
 }
 int QuickSort::Split(vector<int> &getsort, int lower, int upper, int point_index){

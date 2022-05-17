@@ -7,7 +7,7 @@ class BubbleSort: public Sort{
 public:
    BubbleSort();
    ~BubbleSort() {};
-   void exec(std::vector<int> &getsort);
+   void sort(std::vector<int> &getsort);
 private:
 };
 #endif

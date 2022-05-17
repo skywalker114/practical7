@@ -3,7 +3,7 @@
 using namespace std;
 
 BubbleSort::BubbleSort(){}
-void BubbleSort::exec(vector<int> &getsort){
+void BubbleSort::sort(vector<int> &getsort){
    bool wasexchange = 0;
    for (unsigned int i = 0; i < getsort.size(); i++){
        for (unsigned int j = 0; j < getsort.size()-1; j++){

@@ -6,7 +6,7 @@ class Sort
    public:
       Sort();
       ~Sort(){};
-      virtual void exec(){};
+      virtual void sort(){};
       void exchange(int&, int&);
    private:
 };
