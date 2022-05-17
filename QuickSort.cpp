@@ -3,25 +3,25 @@
 using namespace std;
 
 QuickSort::QuickSort(){}
-void QuickSort::sort(vector<int> &getsort, int lower, int upper){
+void QuickSort::sort(vector<int> list, int lower, int upper){
    if (lower < upper){
        int point_index = (lower + upper) / 2;
-       int new_point = Split(getsort, lower, upper, point_index);
-       sort(getsort, lower, new_point - 1);
-       sort(getsort, new_point + 1, upper);  
+       int new_point = Split(list, lower, upper, point_index);
+       sort(list, lower, new_point - 1);
+       sort(list, new_point + 1, upper);  
    }
 }
-int QuickSort::Split(vector<int> &getsort, int lower, int upper, int point_index){
+int QuickSort::Split(vector<int> list, int lower, int upper, int point_index){
    int new_point = lower;
-   int point_value = getsort.at(point_index);
-   exchange(getsort.at(point_index), getsort.at(upper));
+   int point_value = list.at(point_index);
+   exchange(list.at(point_index), list.at(upper));
    for (int i = lower; i <= upper - 1; i++){
-       if (getsort.at(i) <= point_value){
-           exchange(getsort.at(i), getsort.at(new_point));
+       if (list.at(i) <= point_value){
+           exchange(list.at(i), list.at(new_point));
            new_point++;
        }
    }
-   exchange(getsort.at(new_point), getsort.at(upper));
+   exchange(list.at(new_point), list.at(upper));
    return new_point;
 }
 
