@@ -2,8 +2,8 @@
 #include "RecursiveBinarySearch.h"
 using namespace std;
 
-RecursiveBinarySearch::RecursiveBinarySearch(){}
-int RecursiveBinarySearch::search(vector<int> list, int key, int lower, int upper){
+bool RecursiveBinarySearch::search(vector<int> list, int key, int lower, int upper)
+{
    if( lower > upper ){
        return -1;
    }
@@ -17,4 +17,4 @@ int RecursiveBinarySearch::search(vector<int> list, int key, int lower, int uppe
    else{
        return midpoint;
    }
-}
+};

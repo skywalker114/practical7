@@ -2,8 +2,8 @@
 #include "BubbleSort.h"
 using namespace std;
 
-BubbleSort::BubbleSort(){}
-void BubbleSort::sort(vector<int> list){
+std::vector<int> BubbleSort::sort(vector<int> list)
+{
    bool wasexchange = 0;
    for (unsigned int i = 0; i < list.size(); i++){
        for (unsigned int j = 0; j < list.size()-1; j++){
@@ -16,4 +16,5 @@ void BubbleSort::sort(vector<int> list){
            break;
        }
    }
+   return list;
 }
