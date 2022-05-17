@@ -6,7 +6,7 @@ class RecursiveBinarySearch{
 public:
    RecursiveBinarySearch();
    ~RecursiveBinarySearch() {};
-   int search(std::vector<int> &toSearch, int, int, int);
+   int search(std::vector<int> list, int, int, int);
 private:
 };
 #endif
