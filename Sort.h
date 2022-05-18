@@ -4,10 +4,8 @@
 class Sort
 {
    public:
-      Sort();
-      ~Sort(){};
-      virtual void sort(){};
-      void exchange(int&, int&);
+      Sort(){};
+      std::vector<int> sort(std::vector<int> list);
    private:
 };
 #endif

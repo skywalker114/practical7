@@ -1,8 +1,8 @@
 #include "Sort.h"
 using namespace std;
 
-Sort::Sort(){}
-void Sort::exchange(int &a, int &b){
+std::vector<int> Sort::sort(std::vector<int> list)
+{
    int temp = a;
    a = b;
    b = temp;
