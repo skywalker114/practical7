@@ -7,5 +7,6 @@ class QuickSort: public Sort{
 public:
    QuickSort() {};
    std::vector<int> sort(std::vector<int> list);
+private:
 };
 #endif

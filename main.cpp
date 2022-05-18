@@ -10,25 +10,16 @@
 using namespace std;
 
 int main(){
-   vector<int> inputs;
-   string loadnumber;
-   getline(cin, loadnumber);
-   istringstream iss(loadnumber);
-   int val;
-   while (iss >> val){
-       inputs.push_back(val);
-   }
-   QuickSort myq;
-   myq.sort(less.push_back(val);
-   RecursiveBinarySearch mybin;
-   int found = mybin.search(inputs, 0, 0, inputs.size() - 1);
-   if (found >= 0){
-       cout << "false";
-   }
-   else{
-       cout << "true";
-   }
-   for(unsigned int i = 0; i < inputs.size(); i++){
-       cout << " " << inputs.at(i);
-   }
+    QuickSort myq;
+    RecursiveBinarySearch mybin;
+    int loadnum = 0;
+    std::string found;
+    std::vector<int> val;
+    while (std::cin >> loadnum) val.push_back(loadnum);
+    val = myq.sort(val);
+    if (mybin.search(val, 1)) found = "true";
+    else found = "false";
+    std::cout << found << " ";
+    for (int i = 0; i < val.size(); i++) std::cout << val[i] << " ";
+    return 0;
 }
